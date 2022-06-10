@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin-bottom: 20px;
+            /* 复合写法(位移尽量先写) */
+            /* 水平垂直位移100px，顺时针旋转180度，等比例放大1.1倍 */
+            /* transform: translate(100px, 100px) rotate(180deg) scale(1.1); */
+        }
+        
+        .box1 {
+            /* X轴移动10px,Y轴移动10px */
+            transform: translate(10px, 10px);
+            /* 水平移动100px */
+            /* transform: translate(100px, 0); */
+            /* 垂直移动100px */
+            /* transform: translate(0, 100px); */
+            /* 水平20px */
+            /* transform: translateX(20px); */
+            /* 垂直20px */
+            /* transform: translateY(20px); */
+            /* 3D:需要配合 */
+            transform: translateZ(20px);
+        }
+        
+        .box3 {
+            /* 如果使用百分比，盒子移动的距离是盒子自身元素的百分比 */
+            transform: translateX(50%);
+        }
+        
+        img {
+            width: 150px;
+            border: 1px solid red;
+            border-radius: 50%;
+            transition: all .3s;
+        }
+        
+        img:hover {
+            /* 顺时针旋转160度 */
+            transform: rotate(160deg);
+        }
+        
+        .box4 {
+            background-color: pink;
+            margin: 0 auto;
+            transition: all 1s;
+            /* 以左下角为中心旋转 */
+            transform-origin: left bottom;
+        }
+        
+        .box4:hover {
+            /* 顺时针旋转270度 */
+            transform: rotate(270deg);
+            /* 宽度翻倍，高度翻倍 */
+            transform: scale(2, 2);
+            /* 等比例缩放 */
+            /* transform: scale(2); */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box3"></div>
+    <img src="./images/1.jpg" alt="">
+    <div class="box4"></div>
+
+</body>
+
+</html>
