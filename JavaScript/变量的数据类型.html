@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* ----------------------Number数字型--------------------- */
+        // Number数字型
+        var num = 10;
+        var PI = 3.1415926;
+        // 数字型的最大值
+        console.log(Number.MAX_VALUE);
+        // 数字型最小值
+        console.log(Number.MIN_VALUE);
+        // 无穷大
+        console.log(Number.MAX_VALUE * 2); // Infinity
+        // 无穷小
+        console.log(-Number.MAX_VALUE * 2); // -Infinity
+        // 非数字(Not a Number)
+        console.log('cc' - 100); //NaN
+        // isNaN
+        console.log(isNaN('xx')); //true
+        console.log(isNaN(345)); //false
+
+        // 字符串类型
+        var str = '10 20 359';
+        // 字符串长度
+        console.log(str.length); //9
+        // 字符串拼接(任何一个类型跟字符串拼接，都返回字符串)
+        console.log('沙漠骆驼' + 666); //'沙漠骆驼666'
+        console.log('沙漠骆驼' + true); //'沙漠骆驼true'
+        console.log('12' + 12); //'1212'
+
+        // 布尔型
+        var flag1 = true;
+        var flag2 = false;
+        console.log(flag1 + 1); // ture参与运算，当做1
+        console.log(flag2 + 1); // flase参与运算，当作0
+
+        //如果一个变量只声明未赋值，就是underfined 未定义数据类型
+        var strccc;
+        console.log(strccc); //underfined
+        console.log(strccc + 'str'); //underfinedstr
+        console.log(strccc + 12); //NaN
+
+        // null 空值
+        var space = null;
+        console.log('str' + space); //strnull
+        console.log(space + 22); //22
+
+        // 判断数据类型
+        console.log('---------判断数据类型----------');
+        console.log(typeof num);
+        console.log(typeof str);
+        console.log(typeof flag1);
+        console.log(typeof strccc);
+        console.log(typeof space);
+    </script>
+</body>
+
+</html>
